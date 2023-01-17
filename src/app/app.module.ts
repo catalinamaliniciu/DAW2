@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ItemComponent } from './components/item/item.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     ContactComponent,
-    ItemComponent
+    ItemComponent,
+    ForbiddenComponent
   ],
   imports: [
     BrowserModule,
