@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ItemComponent } from './components/item/item.component';
-import { ForbiddenComponent } from './forbidden/forbidden.component';
+import { ForbiddenComponent } from './components/forbidden/forbidden.component';
+import { PrivateComponent } from './components/private/private.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
     AboutComponent,
     ContactComponent,
     ItemComponent,
-    ForbiddenComponent
+    ForbiddenComponent,
+    PrivateComponent
   ],
   imports: [
     BrowserModule,

@@ -7,16 +7,10 @@ import { Observable } from 'rxjs';
   templateUrl: './item.component.html',
   styleUrls: ['./item.component.css']
 })
-export class ItemComponent implements OnInit, CanActivate {
-  isPublic: boolean = false;
+export class ItemComponent implements OnInit {
   name: string | null = null;
   constructor(public route: ActivatedRoute, private router: Router){}
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-    // alert("canActivate");
-    // console.log("Permission denied!");
-    this.router.navigateByUrl('/forbidden');
-    return this.isPublic;
-  }
+
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.name = params.get('name');

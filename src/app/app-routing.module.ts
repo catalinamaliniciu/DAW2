@@ -6,12 +6,14 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ItemComponent } from './components/item/item.component';
 import { ForbiddenComponent } from './components/forbidden/forbidden.component';
 import { AuthGuard } from './guards/auth.guard';
+import { PrivateComponent } from './components/private/private.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/about', pathMatch: 'full' },
   { path: 'item/:name', component: ItemComponent, canActivate: [AuthGuard]},
   { path: 'about', component: AboutComponent, canActivate: [AuthGuard] },
   { path: 'contact', component: ContactComponent, canActivate: [AuthGuard]},
+  { path: 'private', component: PrivateComponent, canActivate: [AuthGuard]},
   { path: 'forbidden', component: ForbiddenComponent},
   { path: '**', component: PageNotFoundComponent }
 ];

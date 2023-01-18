@@ -15,7 +15,8 @@ export class AuthGuard implements CanActivate {
       
       // provides the path of the route.
       const { path } = routeConfig as Route; 
-      if (path?.includes('about') || path?.includes('contact')) {
+      
+      if (path?.includes('about') || path?.includes('contact') || path?.includes('item')) {
       // if user is customer and is accessing customer route, allow access.
     
         return true;
@@ -23,5 +24,4 @@ export class AuthGuard implements CanActivate {
       this.router.navigateByUrl('/forbidden'); 
       return false;
   }
-  
 }
